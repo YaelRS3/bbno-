@@ -80,6 +80,60 @@
       color: #bbb;
       font-size: 0.95rem;
     }
+    .videos-section {
+      max-width: 900px;
+      margin: 40px auto 24px auto;
+      padding: 24px 20px;
+      border-radius: 16px;
+      background: #232323;
+      box-shadow: 0 4px 24px #0005;
+    }
+    .videos-section h2 {
+      margin-bottom: 18px;
+      color: #c7f464;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #444;
+      padding-bottom: 8px;
+    }
+    .videos-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+    .video-card {
+      background: #181818;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #000a;
+      width: 320px;
+      padding: 12px 8px 10px 8px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .video-card iframe {
+      width: 100%;
+      height: 180px;
+      border-radius: 8px;
+      border: none;
+    }
+    .video-card span {
+      display: block;
+      color: #fff;
+      font-size: 1.05rem;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+    @media (max-width: 900px) {
+      .videos-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .video-card {
+        width: 98vw;
+        max-width: 370px;
+      }
+    }
     @media (max-width: 600px) {
       .artist-header .profile-img img {
         width: 80px;
@@ -88,15 +142,17 @@
       .artist-header h1 {
         font-size: 1.5rem;
       }
-      .release-section {
+      .release-section,
+      .videos-section {
         padding: 12px 4px;
+        max-width: 100%;
       }
       .release-card img {
         width: 60px;
         height: 60px;
       }
-      .release-section {
-        max-width: 100%;
+      .video-card iframe {
+        height: 150px;
       }
     }
   </style>
@@ -117,6 +173,25 @@
         <span class="title">mary poppins - Single</span>
         <span class="date">29 MAY 2025</span>
       </div>
+    </div>
+  </section>
+
+  <section class="videos-section">
+    <h2>Videos</h2>
+    <div class="videos-list">
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/nCwzvYp4zpw" allowfullscreen></iframe>
+        <span>bbno$ & Rich Brian - edamame</span>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/q6EoRBvdVPQ" allowfullscreen></iframe>
+        <span>bbno$ & Yung Gravy - Shining on my Ex</span>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/1b4TjJ5Z50g" allowfullscreen></iframe>
+        <span>bbno$ - lalala (ft. y2k)</span>
+      </div>
+      <!-- Agrega aquí más videos si tienes más links -->
     </div>
   </section>
 </body>
