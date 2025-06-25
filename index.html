@@ -33,7 +33,7 @@
       text-shadow: 0 2px 10px #000;
     }
     .release-section {
-      max-width: 500px;
+      max-width: 700px;
       margin: 40px auto;
       padding: 24px 20px;
       border-radius: 16px;
@@ -50,88 +50,81 @@
     .release-card {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 24px;
       background: #181818;
       border-radius: 12px;
       padding: 12px 18px;
       box-shadow: 0 2px 8px #000a;
+      flex-wrap: wrap;
+    }
+    .release-img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .release-card img {
-      width: 90px;
-      height: 90px;
+      width: 110px;
+      height: 110px;
       object-fit: cover;
       border-radius: 8px;
       background: #333;
       border: 2px solid #333;
       flex-shrink: 0;
+      margin-bottom: 8px;
     }
     .release-info {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      min-width: 140px;
+      max-width: 180px;
     }
     .release-info .title {
       color: #fff;
       font-size: 1.1rem;
       font-weight: 600;
       margin-bottom: 6px;
+      word-break: break-word;
     }
     .release-info .date {
       color: #bbb;
       font-size: 0.95rem;
     }
-    .videos-section {
-      max-width: 900px;
-      margin: 40px auto 24px auto;
-      padding: 24px 20px;
-      border-radius: 16px;
-      background: #232323;
-      box-shadow: 0 4px 24px #0005;
-    }
-    .videos-section h2 {
-      margin-bottom: 18px;
-      color: #c7f464;
-      font-size: 1.5rem;
-      border-bottom: 2px solid #444;
-      padding-bottom: 8px;
-    }
-    .videos-list {
+    .release-video {
+      flex: 1 1 260px;
+      min-width: 230px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
+      align-items: center;
       justify-content: center;
+      padding: 0 8px;
     }
-    .video-card {
-      background: #181818;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px #000a;
-      width: 320px;
-      padding: 12px 8px 10px 8px;
-      text-align: center;
-      margin-bottom: 12px;
-    }
-    .video-card iframe {
+    .release-video iframe {
       width: 100%;
-      height: 180px;
-      border-radius: 8px;
+      min-width: 230px;
+      max-width: 340px;
+      height: 190px;
+      border-radius: 10px;
       border: none;
-    }
-    .video-card span {
-      display: block;
-      color: #fff;
-      font-size: 1.05rem;
-      margin-top: 8px;
-      font-weight: 500;
+      background: #000;
     }
     @media (max-width: 900px) {
-      .videos-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+      .release-section {
+        max-width: 100%;
       }
-      .video-card {
-        width: 98vw;
-        max-width: 370px;
+      .release-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+      }
+      .release-img, .release-video {
+        align-items: center;
+        justify-content: center;
+      }
+      .release-video iframe {
+        width: 100%;
+        min-width: unset;
+        max-width: 100%;
+        height: 170px;
       }
     }
     @media (max-width: 600px) {
@@ -142,17 +135,15 @@
       .artist-header h1 {
         font-size: 1.5rem;
       }
-      .release-section,
-      .videos-section {
+      .release-section {
         padding: 12px 4px;
-        max-width: 100%;
       }
       .release-card img {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
       }
-      .video-card iframe {
-        height: 150px;
+      .release-video iframe {
+        height: 140px;
       }
     }
   </style>
@@ -168,30 +159,16 @@
   <section class="release-section">
     <h2>Último lanzamiento</h2>
     <div class="release-card">
-      <img src="mary-poppins.jpeg" alt="mary poppins - single">
-      <div class="release-info">
-        <span class="title">mary poppins - Single</span>
-        <span class="date">29 MAY 2025</span>
+      <div class="release-img">
+        <img src="mary-poppins.jpeg" alt="mary poppins - single">
+        <div class="release-info">
+          <span class="title">mary poppins - Single</span>
+          <span class="date">29 MAY 2025</span>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="videos-section">
-    <h2>Videos</h2>
-    <div class="videos-list">
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/nCwzvYp4zpw" allowfullscreen></iframe>
-        <span>bbno$ & Rich Brian - edamame</span>
+      <div class="release-video">
+        <iframe src="https://www.youtube.com/embed/-Ty41h_OIXI" title="mary poppins - Single" allowfullscreen></iframe>
       </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/q6EoRBvdVPQ" allowfullscreen></iframe>
-        <span>bbno$ & Yung Gravy - Shining on my Ex</span>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/1b4TjJ5Z50g" allowfullscreen></iframe>
-        <span>bbno$ - lalala (ft. y2k)</span>
-      </div>
-      <!-- Agrega aquí más videos si tienes más links -->
     </div>
   </section>
 </body>
