@@ -2,97 +2,122 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>bbno$ | Página de Fan</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>bbno$ - Página de Artista</title>
+  <style>
+    body {
+      background: #222;
+      color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .artist-header {
+      text-align: center;
+      padding: 40px 0 10px 0;
+    }
+    .artist-header .profile-img img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #444;
+      background: #111;
+    }
+    .artist-header h1 {
+      font-size: 2.8rem;
+      margin: 18px 0 0 0;
+      letter-spacing: 2px;
+      font-weight: 600;
+      color: #c7f464;
+      text-shadow: 0 2px 10px #000;
+    }
+    .release-section {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 24px 20px;
+      border-radius: 16px;
+      background: #232323;
+      box-shadow: 0 4px 24px #0005;
+    }
+    .release-section h2 {
+      margin-bottom: 18px;
+      color: #c7f464;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #444;
+      padding-bottom: 8px;
+    }
+    .release-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: #181818;
+      border-radius: 12px;
+      padding: 12px 18px;
+      box-shadow: 0 2px 8px #000a;
+    }
+    .release-card img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #333;
+      border: 2px solid #333;
+      flex-shrink: 0;
+    }
+    .release-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .release-info .title {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .release-info .date {
+      color: #bbb;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 600px) {
+      .artist-header .profile-img img {
+        width: 80px;
+        height: 80px;
+      }
+      .artist-header h1 {
+        font-size: 1.5rem;
+      }
+      .release-section {
+        padding: 12px 4px;
+      }
+      .release-card img {
+        width: 60px;
+        height: 60px;
+      }
+      .release-section {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="artist-header">
     <div class="profile-img">
-      <img src="img/bbno-profile.jpg" alt="bbno$">
+      <img src="bbno-profile.jpg" alt="bbno$">
     </div>
     <h1>bbno$</h1>
   </header>
 
-  <main>
-    <section class="latest-release">
-      <h2>Último lanzamiento</h2>
-      <div class="release-card">
-        <img src="img/mary-poppins.jpg" alt="mary poppins single">
-        <div>
-          <p class="song-title">mary poppins - Single</p>
-          <p class="release-date">29 MAY 2025</p>
-        </div>
+  <section class="release-section">
+    <h2>Último lanzamiento</h2>
+    <div class="release-card">
+      <img src="mary-poppins.jpeg" alt="mary poppins - single">
+      <div class="release-info">
+        <span class="title">mary poppins - Single</span>
+        <span class="date">29 MAY 2025</span>
       </div>
-    </section>
-
-    <section class="top-songs">
-      <h2>Top canciones</h2>
-      <ol>
-        <li>edamame (feat. Rich Brian)</li>
-        <li>Lalala</li>
-        <li>boom</li>
-        <li>check it</li>
-        <li>two</li>
-        <li>C'est La Vie</li>
-        <li>It Boy</li>
-        <li>Whip a Tesla</li>
-      </ol>
-    </section>
-
-    <section class="albums">
-      <h2>Álbumes</h2>
-      <div class="album-list">
-        <div class="album-card">
-          <img src="img/baby-gravy-3.jpg" alt="Baby Gravy 3">
-          <span>Baby Gravy 3 (2023)</span>
-        </div>
-        <div class="album-card">
-          <img src="img/bag-or-die.jpg" alt="bag or die">
-          <span>bag or die (2022)</span>
-        </div>
-        <div class="album-card">
-          <img src="img/eat-ya-veggies.jpg" alt="eat ya veggies">
-          <span>eat ya veggies (2021)</span>
-        </div>
-        <div class="album-card">
-          <img src="img/good-luck.jpg" alt="Good Luck Have Fun">
-          <span>Good Luck Have Fun (2020)</span>
-        </div>
-        <div class="album-card">
-          <img src="img/baby-gravy-2.jpg" alt="Baby Gravy 2">
-          <span>Baby Gravy 2 (2020)</span>
-        </div>
-        <div class="album-card">
-          <img src="img/i-dont-care.jpg" alt="i don't care at all">
-          <span>i don't care at all (2019)</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="video-section">
-      <h2>Videos musicales</h2>
-      <div class="video-list">
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/QuvqzlxEO6g" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/-Ty41h_OIXI" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/X9xwkwD1zWM" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/FmlGo1KY2jE" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/KzA-Rz_gPgY" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video-card">
-          <iframe src="https://www.youtube.com/embed/LiXYi-_MVa4" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </body>
 </html>
