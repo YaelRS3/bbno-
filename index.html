@@ -107,24 +107,58 @@
       border: none;
       background: #000;
     }
+    .recommend-section {
+      max-width: 900px;
+      margin: 40px auto 24px auto;
+      padding: 24px 20px;
+      border-radius: 16px;
+      background: #232323;
+      box-shadow: 0 4px 24px #0005;
+    }
+    .recommend-section h2 {
+      margin-bottom: 18px;
+      color: #c7f464;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #444;
+      padding-bottom: 8px;
+    }
+    .recommend-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+    .video-card {
+      background: #181818;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #000a;
+      width: 320px;
+      padding: 12px 8px 10px 8px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .video-card iframe {
+      width: 100%;
+      height: 180px;
+      border-radius: 8px;
+      border: none;
+    }
+    .video-card span {
+      display: block;
+      color: #fff;
+      font-size: 1.05rem;
+      margin-top: 8px;
+      font-weight: 500;
+    }
     @media (max-width: 900px) {
-      .release-section {
-        max-width: 100%;
-      }
-      .release-card {
+      .recommend-list {
         flex-direction: column;
-        align-items: stretch;
-        gap: 18px;
-      }
-      .release-img, .release-video {
         align-items: center;
-        justify-content: center;
+        gap: 20px;
       }
-      .release-video iframe {
-        width: 100%;
-        min-width: unset;
-        max-width: 100%;
-        height: 170px;
+      .video-card {
+        width: 98vw;
+        max-width: 370px;
       }
     }
     @media (max-width: 600px) {
@@ -135,8 +169,10 @@
       .artist-header h1 {
         font-size: 1.5rem;
       }
-      .release-section {
+      .release-section,
+      .recommend-section {
         padding: 12px 4px;
+        max-width: 100%;
       }
       .release-card img {
         width: 70px;
@@ -144,6 +180,9 @@
       }
       .release-video iframe {
         height: 140px;
+      }
+      .video-card iframe {
+        height: 150px;
       }
     }
   </style>
@@ -168,6 +207,24 @@
       </div>
       <div class="release-video">
         <iframe src="https://www.youtube.com/embed/-Ty41h_OIXI" title="mary poppins - Single" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="recommend-section">
+    <h2>Recomendaciones</h2>
+    <div class="recommend-list">
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/K6BRna4_bmg" allowfullscreen title="edamame"></iframe>
+        <span>edamame</span>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/wTelhUrRiYE" allowfullscreen title="shining on my ex"></iframe>
+        <span>shining on my ex</span>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/N2Y2vQ-1m7M" allowfullscreen title="lalala"></iframe>
+        <span>lalala</span>
       </div>
     </div>
   </section>
